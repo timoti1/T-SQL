@@ -5,13 +5,13 @@ if OBJECT_ID('dbo.usp_GetSwimmersList', 'P') is not null
    drop procedure dbo.usp_GetSwimmersList
 go
 
--------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
 -- procedure returns list of Swimmers from given clubs
 -- created by:   Timofey Gavrilenko
 -- created date: 4/22/2019
 -- sample call:  
 -- exec dbo.usp_GetSwimmersList @parameters = N'[{"Club": "Трактор", "City": "Минск"}]'
------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
 
 create procedure dbo.usp_GetSwimmersList
     @parameters nvarchar(1000) = null
