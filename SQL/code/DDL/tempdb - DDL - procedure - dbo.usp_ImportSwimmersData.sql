@@ -183,10 +183,10 @@ begin
     insert into dbo.SwimmerCoach (SwimmerID, CoachID)
     select s.SwimmerID, c.CoachID
     from #Swimmer js
-    join dbo.Swimmer s                 on js.FirstName  = s.FirstName and 
-                                          js.LastName    = s.LastName and 
-                                          js.YearOfBirth = s.YearOfBirth and 
-                                          js.Gender      = s.Gender
+    join dbo.Swimmer s                on js.FirstName   = s.FirstName and 
+                                         js.LastName    = s.LastName and 
+                                         js.YearOfBirth = s.YearOfBirth and 
+                                         js.Gender      = s.Gender
     
     cross apply openjson(js.Coach) 
         with
@@ -194,11 +194,11 @@ begin
             FirstName       nvarchar(20)    N'$.FirstName',
             LastName        nvarchar(30)    N'$.LastName'
         )  jc 
-    join dbo.Coach c                   on jc.FirstName  = c.FirstName and
-                                          jc.LastName   = c.LastName
+    join dbo.Coach c                  on jc.FirstName  = c.FirstName and
+                                         jc.LastName   = c.LastName
 
-    left join dbo.SwimmerCoach sc      on s.SwimmerID   = sc.SwimmerID and
-                                          c.CoachID     = sc.CoachID
+    left join dbo.SwimmerCoach sc     on s.SwimmerID   = sc.SwimmerID and
+                                         c.CoachID     = sc.CoachID
     where sc.SwimmerID is null and sc.CoachID is null
 end
 go    
