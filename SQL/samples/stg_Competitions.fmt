@@ -1,0 +1,12 @@
+14.0
+9
+1       SQLCHAR             0       510     ","     2     F1       ""
+2       SQLCHAR             0       510     ","     3     F2       ""
+3       SQLCHAR             0       510     ","     4     F3       ""
+4       SQLCHAR             0       510     ","     5     F4       ""
+5       SQLCHAR             0       510     ","     6     F5       ""
+6       SQLCHAR             0       510     ","     7     F6       ""
+7       SQLCHAR             0       510     ","     8     F7       ""
+8       SQLCHAR             0       510     ","     9     F8       ""
+9       SQLCHAR             0       510    "\r\n"   10    F9       ""
+
